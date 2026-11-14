@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./App.css">
+    <title>Expense Tracker</title>
+    <link rel="icon" type="image/png" href="./Components/Images/budget.png">
+</head>
+
+<body>
+    <div id="Main">
+        <div class="AppName">
+            <h1>
+                Personal Expense Tracker
+            </h1>
+        </div>
+        <hr />
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////         -->
+        <div class="MainDashbord">
+            <div class="item" style="background-color: #4e46e516;">
+                <!-- <img src="./components/images/icons8-administrator-male-50.png" alt=""> -->
+                <h3>
+                    Total Balance
+                </h3>
+                <h2 id="TotalBalance">
+
+                </h2>
+            </div>
+
+            <div class="item" style="background-color: #16a34a17;">
+                <!-- <img src="./components/images/icons8-administrator-male-50.png" alt=""> -->
+                <h3>
+                    Total Income
+                </h3>
+                <h2 id="TotalIncome">
+
+                </h2>
+            </div>
+            <div class="item" style="background-color: #e11d4713;">
+                <!-- <img src="./components/images/icons8-administrator-male-50.png" alt=""> -->
+                <h3>
+                    Total Expenses
+                </h3>
+                <h2 id="TotalExpense">
+
+                </h2>
+            </div>
+            <div class="item" style="background-color: #c234de24;">
+                <!-- <img src="./components/images/icons8-administrator-male-50.png" alt=""> -->
+                <h3>
+                    Total Transactions
+                </h3>
+                <h2 id="TotalTransactions">
+
+                </h2>
+            </div>
+        </div>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////         -->
+        <!-- ///////////////////////////////////////////// Search Bar start//////////////////////////////////////////////////////////////////////////         -->
+
+        <div class="MainSearchBox">
+            <div class="search-wrapper">
+                <input type="search" id="searchinput" placeholder="Search By Title">
+                <img src="./components/images/search.png" alt="SearchIcon">
+            </div>
+            <div class="ThreeFilters">
+                <div class="filter">
+                    <select name="Category" id="CategorySelect" required>
+                        <option value="" disabled selected>
+                            Filter Keyword
+                        </option>
+                        <option value="All Transaction">
+                            All Transaction
+                        </option>
+                        <option value="Expense">
+                            Expense
+                        </option>
+                        <option value="Income">
+                            Income
+                        </option>
+                    </select>
+                </div>
+                <div class="Category_2">
+                    <select name="Category" id="CategorySelect_2" required>
+                        <option value="" disabled selected>
+                            Filter Category
+                        </option>
+                        <option value="All Categories">
+                            All Categories
+                        </option>
+                        <option value="Food & Grocery">
+                            Food & Grocery
+                        </option>
+                        <option value="Home Accesories">
+                            Home Accesories
+                        </option>
+                        </option>
+                        <option value="Salary">
+                            Salary
+                        </option>
+                        <option value=" Online Payment ">
+                            Online Payment
+                        </option>
+                        <option value="Other Expense">
+                            Other Expense
+                        </option>
+                        <option value="Other Income">
+                            Other Income
+                        </option>
+                    </select>
+                </div>
+                <div class="CostAndDate">
+                    <select name="Category" id="CategorySelect_3" required>
+                        <option value="" disabled selected>
+                            Cost And Date
+                        </option>
+                        <option value="OverAll">
+                            OverAll
+                        </option>
+                        <option value="Newest First">
+                            Newest First
+                        </option>
+                        <option value="Oldest First">
+                            Oldest First
+                        </option>
+                        <option value="Low To High">
+                            Low To High
+                        </option>
+                        <option value="High To Low">
+                            High To Low
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <!-- ///////////////////////////////////////////// Search Bar End//////////////////////////////////////////////////////////////////////////         -->
+        <!-- ///////////////////////////////////////////// history starts//////////////////////////////////////////////////////////////////////////         -->
+        <!-- ///////////////////////////////////////////// butonnnnnnnnn//////////////////////////////////////////////////////////////////////////         -->
+        <div class="HistoryBox">
+            
+                <div class="addbutton">
+                    <h4 style="display: flex;justify-content: center;align-items: center;">Add Transaction</h4>
+                </div>
+            
+            <!-- <a href="./Form.html">hahahahahaha</a> -->
+
+
+            <h1>
+                Transaction History
+            </h1>
+            <!-- ///////////////////////////////////////////// history data//////////////////////////////////////////////////////////////////////////         -->
+
+            <div class="HistoryData">
+                <div class="MiniNav">
+                    <h4>
+                        Date
+                    </h4>
+                    <h4>
+                        Title
+                    </h4>
+                    <h4>
+                        Category
+                    </h4>
+                    <h4>
+                        Type
+                    </h4>
+                    <h4>
+                        Amount
+                    </h4>
+                    <h4>
+                        Actions
+                    </h4>
+                </div>
+                <!-- ///////////////////////////////////////////// user values //////////////////////////////////////////////////////////////////////////         -->
+                <div id="TransactionsList">
+
+                </div>
+                <!-- <div class="userValues">
+
+                    
+                     <p>
+                        Date
+                    </p>
+                    <p>
+                        Title
+                    </p>
+                    <p>
+                        Category
+                    </p>
+                    <p>
+                        Type
+                    </p>
+                    <p>
+                        Amount
+                    </p>
+                    <p>
+                        Actions
+                    </p> 
+                    </div>-->
+            </div>
+            <!-- ///////////////////////////////////////////// history data end//////////////////////////////////////////////////////////////////////////         -->
+
+        </div>
+        <!-- <div id="demo">
+          <p>
+
+          </p>
+        </div> -->
+    </div>
+
+    <!-- ///////////////////////////////////////////// history data end//////////////////////////////////////////////////////////////////////////         -->
+    <!-- ///////////////////////////////////////////// history data end//////////////////////////////////////////////////////////////////////////         -->
+    <!-- ///////////////////////////////////////////// history data end//////////////////////////////////////////////////////////////////////////         -->
+
+    <!-- <div id="FormMain"> -->
+
+
+    <div class="FormCard" id="FormCard">
+        <div class="Text">
+            <h2>
+                Add New Transaction
+            </h2>
+        </div>
+        <!-- /////////// Form Tag Start/////////////////// -->
+
+        <div class="Form">
+
+            <div class="UpperSec">
+                <div class="selectTransaction">
+                    <div>
+                        <h4>
+                            Select Transaction Type
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- //////////////   mini cards   ///////////////////// -->
+            <form id="Form">
+                <div class="select">
+                    <div class="selectP">
+
+                        <label>
+
+                            <input id="Expense" type="radio" name="choice" value="Expense" required>
+                            <p style="width: 80px;">Expense</p>
+                        </label>
+
+                    </div>
+
+                    <h3>
+                        /
+                    </h3>
+                    <div class="selectP">
+                        <label>
+
+                            <input id="Income" type="radio" name="choice" value="Income" required>
+                            <p style="width: 80px;">Income</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="MiddleSec">
+
+                    <div class="FormMiniCrads">
+
+                        <div class="Cards">
+
+                            <h3>
+                                Title
+                            </h3>
+                            <input id="Title" type="text" maxlength="15" required name="title">
+                        </div>
+                        <div class="Cards">
+
+                            <h3>
+                                Amount
+                            </h3>
+                            <input id="Amount" type="number" min="0" max="9000000" required name="amount">
+                        </div>
+                        <div class="Cards">
+
+                            <h3>
+                                Category
+                            </h3>
+                            <select name="Category" id="CategorySelect_1" required>
+                                <option value="" disabled selected>
+                                    Select Category
+                                </option>
+                                <option value="Food & Grocery">
+                                    Food & Grocery
+                                </option>
+                                <option value="Home Accesories">
+                                    Home Accesories
+                                </option>
+                                <option value="Salary">
+                                    Salary
+                                </option>
+                                <option value=" Online Payment ">
+                                    Online Payment
+                                </option>
+                                <option value="Other Expense">
+                                    Other Expense
+                                </option>
+                                <option value="Other Income">
+                                    Other Income
+                                </option>
+                            </select>
+                        </div>
+                        <div class="Cards">
+
+                            <h3>
+                                Date
+                            </h3>
+                            <input id="Date" type="date" required name="Income_">
+                        </div>
+                        <div class="CardsDiscript">
+
+                            <h3>
+                                Description
+                            </h3>
+                            <textarea placeholder="Enter Description Here... This is experimental." maxlength="101" name=""
+                                id="Textinput"></textarea>
+                        </div>
+
+                        <div class="Buttons">
+                            <button id="Save" type="submit">Save</button>
+                            <button id="Clear" type="reset">Clear</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <!-- ////////////////////////////// -->
+
+
+        </div>
+    </div>
+    <!-- main end below -->
+    <!-- </div> -->
+
+
+
+    <script src="./App.js"></script>
+</body>
+
+</html>

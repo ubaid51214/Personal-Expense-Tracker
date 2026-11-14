@@ -1,0 +1,920 @@
+* {
+    margin: 0%;
+
+}
+
+#Main {
+    background: #F5F7FC;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#Main.active {
+    filter: blur(6px);
+}
+
+.AppName h1 {
+    color: rgb(68, 62, 62);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+
+}
+
+.MainDashbord {
+    margin-top: 30px;
+    /* outline: 2px solid red; */
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px 300px; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 60px;
+    font-family: Arial, sans-serif;
+
+
+}
+
+hr {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 900px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.item {
+    /* outline: 1px solid red; */
+    margin-left: 70px;
+    margin-top: 2.5px;
+    width: 180px;
+    height: 55px;
+    /* cursor: pointer; */
+    border-radius: 10px;
+    border: 1.5px solid rgba(33, 32, 32, 0.329);
+}
+
+
+
+.MainDashbord .item h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5px;
+}
+
+.MainDashbord .item h2 {
+    color: #73623c;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* /////////////////////////////////////////////////   No Result Found////////////////////////////////////////////////////////////// */
+.NoResult {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* /////////////////////////////////////////////////   Search starts////////////////////////////////////////////////////////////// */
+
+.MainSearchBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ThreeFilters {
+    display: flex;
+    gap: 0;
+    align-items: center;
+}
+
+.MainSearchBox .search-wrapper {
+    position: relative;
+    max-width: 700px;
+}
+
+.MainSearchBox input {
+
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.632);
+    border: transparent;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    padding-left: 55px;
+    padding-right: 90px;
+    font-size: 16px;
+}
+
+.MainSearchBox img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.filter select {
+
+    margin-top: 8px;
+    max-width: 100%;
+    width: 125px;
+    height: 6vh;
+    margin-left: 10px;
+    border-radius: 5px;
+    /* border: none; */
+    outline: none;
+    transition: border 0.1s ease;
+
+}
+
+.Category_2 select {
+    margin-top: 8px;
+    max-width: 100%;
+    width: 125px;
+    height: 6vh;
+    margin-left: 10px;
+    border-radius: 5px;
+    /* border: none; */
+    outline: none;
+    transition: border 0.1s ease;
+
+}
+
+.CostAndDate select {
+    margin-top: 8px;
+    max-width: 100%;
+    width: 125px;
+    height: 6vh;
+    margin-left: 10px;
+    border-radius: 5px;
+    /* border: none; */
+    outline: none;
+    transition: border 0.1s ease;
+}
+
+.CostAndDate select:hover {
+    background-color: rgba(114, 116, 115, 0.142);
+    border: 2px solid green;
+}
+
+.Category_2 select:hover {
+    background-color: rgba(114, 116, 115, 0.142);
+    border: 2px solid green;
+}
+
+.filter select:hover {
+    background-color: rgba(114, 116, 115, 0.142);
+    border: 2px solid green;
+}
+
+/* /////////////////////////////////////////////////   History starts////////////////////////////////////////////////////////////// */
+
+.HistoryBox {
+    border: 2px solid rgba(112, 129, 164, 0.769);
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 750px;
+    /* height: 300px; */
+    /* background-color: #de1f1f; */
+
+}
+
+.HistoryBox h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.HistoryData {
+    border: 1px solid rgba(112, 129, 164, 0.769);
+    border-radius: 5px;
+    /* background-color: rgb(111, 172, 193); */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 720px;
+    min-height: 00px;
+}
+
+.MiniNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #EEF2FF;
+    color: #172554;
+    /* margin-bottom: 20px; */
+    max-width: 100%;
+    width: 720px;
+    height: 30px;
+    font-family: Arial, sans-serif;
+
+}
+
+.userValues {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /* background-color: rgba(128, 128, 128, 0.148); */
+    /* margin-bottom: 20px; */
+    max-width: 100%;
+    width: 720px;
+    height: 60px;
+}
+
+.DateBox {
+    width: 80px;
+    /* background-color: #243B8F; */
+    margin-left: 5px;
+}
+
+.TitleBox {
+    width: 90px;
+    /* background-color: #243B8F; */
+    margin-left: 40px;
+}
+
+.CategoryBox {
+    width: 140px;
+    /* background-color: #243B8F; */
+    /* margin-left: -100px; */
+}
+
+.TypeBox {
+    width: 60px;
+    /* background-color: #243B8F; */
+    /* margin-left: -120px; */
+    margin-right: 60px;
+}
+
+.AmountBox {
+    width: 60px;
+    /* background-color: #243B8F; */
+    margin-right: 40px;
+}
+
+.Delete_Button {
+    border-radius: 5px;
+    border: none;
+    width: 50px;
+    background-color: #ff0000;
+    margin-right: -0px;
+    cursor: pointer;
+    transform: ease 0.3s;
+}
+
+.Delete_Button:hover {
+    background-color: #ff7300;
+    border: 1px solid #6d0707;
+}
+
+.Edit_Button {
+    border-radius: 5px;
+    border: none;
+    width: 40px;
+    background-color: #00ff66;
+    margin-right: 20px;
+    cursor: pointer;
+    transform: ease 0.3s;
+}
+
+.Edit_Button:hover {
+    background-color: #00ffdd;
+    border: 1px solid #198754;
+}
+
+
+/* .userValues p {
+    margin-left: 5px;
+    margin-right: 5px;
+} */
+
+/* #ButtonDiv {
+    cursor: pointer;
+} */
+
+.addbutton {
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(40, 76, 237);
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: ease 0.3s;
+
+
+}
+
+.addbutton:hover {
+    background-color: rgb(17, 126, 169);
+}
+
+
+
+/* //////////////////////////////////////////////scroll bar//////////////////////////////////////////// */
+
+#TransactionsList {
+    /* background-color: #198754; */
+    max-height: 183px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#TransactionsList::-webkit-scrollbar {
+    width: 5px;
+}
+
+#TransactionsList::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+#TransactionsList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+@media (max-width:768px) {
+    hr {
+        max-width: 100%;
+        width: 600px;
+    }
+
+    .MainDashbord {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        /* outline: 2px solid red; */
+        display: grid;
+        grid-template-columns: 300px 300px;
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+        grid-template-rows: 80px;
+    }
+
+}
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* #FormMain{
+    background-color: #FFF0C9;
+    background-color: #243B8F;
+    color: #FFF0C9;
+    display: none;
+    position: absolute;
+    right: 20%;
+    top: 0px;
+}
+#FormMain.active {
+    display: block;
+} */
+.FormCard {
+    background: linear-gradient(145deg,
+            #F8F8F2 0%,
+            #EEF2EA 100%);
+    border: 1px solid #D0D9CE;
+    border-radius: 18px;
+    color: #26372F;
+    box-shadow: 0 18px 45px rgba(23, 60, 50, 0.16);
+
+    margin: 45px 0 10px;
+    width: 800px;
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
+
+    display: none;
+    position: fixed;
+    left: 50%;
+    right: auto;
+    top: 0;
+    transform: translateX(-50%);
+
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    z-index: 2000;
+}
+
+.FormCard.active {
+    display: block;
+}
+
+.Text h2 {
+    color: #173C32;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    /* background-color: aqua; */
+}
+
+.selectTransaction {
+    margin-top: 5px;
+}
+
+.select {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    /* background-color: #FFF0C9; */
+    /* background-color: rgb(1, 82, 82); */
+    height: 25px;
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+}
+
+.select h3 {
+    margin-top: 0px;
+    color: #173C32;
+
+}
+
+.select input {
+    margin-left: 5px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.select .selectP {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select .selectP:hover {
+    outline: none;
+    border-color: #16805D;
+    box-shadow: 0 0 0 1px rgba(22, 128, 93, 0.12);
+    border-radius: 5px;
+}
+
+.select input[type="radio"]:checked+p {
+    background-color: #243B8F;
+    color: #ffffff;
+    border-radius: 5px;
+    height: 3.9vh;
+
+}
+
+.select .selectP p {
+    cursor: pointer;
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.Form {
+    background: #E7EDE5;
+    border: 1px solid #D0D9CE;
+    border-radius: 12px;
+    /* background: #937272; */
+    max-width: 100%;
+    width: 600px;
+    min-height: 400px;
+    max-height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.Form .UpperSec {
+    display: flex;
+    justify-content: center;
+
+}
+
+.selectTransaction h4 {
+    margin-left: 15px;
+}
+
+.FormMiniCrads {
+    margin-top: 30px;
+    /* outline: 2px solid red; */
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 90px 90px 150px;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     */
+}
+
+.Cards {
+    /* outline: 1px solid red; */
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 2.5px;
+    max-width: 100%;
+    width: 200px;
+    height: 55px;
+    /* cursor: pointer; */
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    border: 1.5px solid rgba(33, 32, 32, 0.329);
+}
+
+.CardsDiscript {
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+    /* outline: 1px solid red; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5px;
+    max-width: 100%;
+    /* width: 400px; */
+    height: 100px;
+    /* cursor: pointer; */
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    border: 1.5px solid rgba(33, 32, 32, 0.329);
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.FormMiniCrads .CardsDiscript h3 {
+    /* display: flex;
+    justify-content: center; */
+    color: #173C32;
+
+    margin-left: 10px;
+    margin-top: 2.5px;
+}
+
+.FormMiniCrads .CardsDiscript #Textinput {
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 370px;
+    height: 60px;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-top: 0px;
+    margin-left: 20px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+textarea::placeholder {
+    color: #26372F;
+}
+
+.FormMiniCrads .Cards h3 {
+    color: #173C32;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5px;
+}
+
+.FormMiniCrads .Cards input {
+    /* background-color: #FFF0C9; */
+    /* background-color: #243B8F; */
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+    margin-top: 2px;
+    max-width: 100%;
+    width: 185px;
+    height: 3.5vh;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+
+}
+
+.FormMiniCrads .Cards select {
+    background: #FFFFFF;
+    color: #26372F;
+    border: 1px solid #D5DDD6;
+    border-radius: 10px;
+    margin-top: 2px;
+    max-width: 100%;
+    width: 185px;
+    height: 3.5vh;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+}
+
+.Buttons {
+    /* outline: 1px solid red; */
+    /* margin-left: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    max-width: 100%;
+    width: 200px;
+    height: 35px;
+    /* cursor: pointer; */
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    /* border: 1.5px solid rgba(33, 32, 32, 0.329); */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #4d4532;
+
+}
+
+.Buttons button {
+    margin-left: 12px;
+    height: 5vh;
+    width: 80px;
+    cursor: pointer;
+    background-color: #7c3aed68;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    color: rgb(49, 45, 45);
+    font-size: 15px;
+
+}
+
+.Buttons button:hover {
+    background-color: #6c28d9af;
+}
+
+@media screen and (min-width:320px) and (max-width:426px) {
+    .AppName h1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    hr {
+        /* display: none; */
+        width: 250px;
+
+    }
+
+    .MainDashbord {
+        /* display: none; */
+        grid-template-rows: 50px;
+        grid-template-columns: 150px 150px;
+    }
+
+    .item {
+        /* outline: 1px solid red; */
+        /* margin-left: 20px;   */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10px;
+        width: 100%;
+        max-width: 100px;
+        height: 35px;
+        /* cursor: pointer; */
+    }
+
+    .MainDashbord .item h3 {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5px;
+    }
+
+    .MainDashbord .item h2 {
+        font-size: 10px;
+
+        color: #73623c;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* //////////////////////////////////////////////// */
+
+    .MainSearchBox {
+        /* background-color: #00ffdd; */
+        /* display: none; */
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 280px;
+        /* height: 200px; */
+        /* max-height: 500px; */
+    }
+
+    .MainSearchBox input {
+        width: 100%;
+        height: 30px;
+        padding-right: 0px;
+        font-size: 15px;
+    }
+
+    .MainSearchBox {
+        flex-wrap: wrap;
+    }
+
+    .ThreeFilters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ThreeFilters select {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        height: 30px;
+    }
+
+    /* //////////////////////////////////////////////// */
+    .HistoryBox {
+        margin-top: 20px;
+        max-width: 100%;
+        width: 300px;
+    }
+
+    .HistoryData {
+        max-width: 100%;
+        width: 295px;
+
+    }
+
+    .userValues {
+        height: 40px;
+    }
+
+    .MiniNav h4 {
+        font-size: 12px;
+    }
+
+    .DateBox {
+        /* background-color: #6bd7cad2; */
+        width: 80px;
+        margin-left: 2px;
+        font-size: 11px;
+    }
+
+    .TitleBox {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 40px;
+        margin-left: 10px;
+        margin-left: 20px;
+
+    }
+
+    .CategoryBox {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 140px;
+        margin-left: 19px;
+
+    }
+
+    .TypeBox {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 60px;
+        /* margin-right: 60px; */
+        margin-left: 10px;
+
+    }
+
+    .AmountBox {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 60px;
+        margin-left: -46px;
+        /* margin-left: 10px; */
+
+    }
+
+    .Delete_Button {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 50px;
+        margin-left: -20px;
+        margin-top: -20px;
+
+    }
+
+    .Edit_Button {
+        font-size: 11px;
+        /* background-color: #6bd7cad2; */
+        width: 50px;
+        margin-top: 16px;
+        margin-left: -37px;
+    }
+
+    .FormCard {
+
+        border-radius: 10px;
+    }
+
+    .FormCard {
+        width: 300px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+
+    }
+
+    .FormMiniCrads {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    .Cards {
+        width: 250px;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    .FormMiniCrads .CardsDiscript {
+        max-height: 68px;
+        min-height: 40px;
+
+    }
+
+    .FormMiniCrads .CardsDiscript #Textinput {
+        /* background: #00bfff; */
+        max-width: 100%;
+        width: 260px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .Buttons {
+        /* outline: 1px solid red; */
+        /* margin-left: 50px; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        max-width: 100%;
+        width: 200px;
+        height: 35px;
+    }
+
+    .Buttons button {
+        height: 25px;
+    }
+
+    .FormMiniCrads .Cards input {
+        margin-left: 30px;
+
+    }
+
+    .FormMiniCrads .Cards select {
+        height: 5vh;
+        margin-left: 30px;
+
+    }
+
+    .select input[type="radio"]:checked+p {
+        height: 6.9vh;
+    }
+}
