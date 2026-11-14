@@ -58,7 +58,7 @@ A responsive web-based Personal Expense Tracker built using HTML, CSS, and Vanil
 ## Project Structure
 
 Personal-Expense-Tracker
- App.html
+ index.html
  App.css
  App.js
  README.md
